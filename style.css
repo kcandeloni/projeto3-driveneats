@@ -6,7 +6,6 @@ bory{
     font-family: 'Roboto', sans-serif;
 }
 
-
 .topo {
     width: 100%;
     height: 92px;
@@ -17,6 +16,7 @@ bory{
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1;
 }
 
 .loja{
@@ -24,6 +24,7 @@ bory{
     height: 100%;
     background-color: #e5e5e5;
     margin: 92px auto;
+    padding-top: 10px;
 }
 .pedido {
     width: 100%;
@@ -35,7 +36,7 @@ bory{
 }
 .loja > div{
     display: flex;
-    overflow: hidden;
+    overflow-x: scroll;
     margin-left: 8px;
 }
 
@@ -52,12 +53,22 @@ bory{
     flex-direction: column;
     justify-content: space-around;
     padding: 15px 15px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* .item:hover {
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
+} */
+
+.select_item{
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25), inset 0px 0px 0px 5px #32B72F;
 }
 
 .loja h3 {
     font-family: 'Righteous';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 400; 
     font-size: 26px;
     line-height: 32px;
     letter-spacing: 0.018em;
@@ -92,6 +103,7 @@ h1 {
     height: 87px;
     border-radius: 4px;
     margin: 0 14px;
+    object-fit: cover;
 }
 
 
@@ -101,17 +113,27 @@ h1 {
     align-items: center;
 }
 
-.pedido button{
+.pedido_button{
     width: 364px;
     height: 61px;
 
     background: #CBCBCB;
     border-radius: 50px;
     border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
+.pedido_ok {
+    background: #32B72F;
+    padding-top: 20px;
+}
+
 .pedido p {
-    width: 364px;
-    height: 53px;
+    width: 220px;
+    height: 50px;
 
     font-family: 'Roboto';
     font-style: normal;
