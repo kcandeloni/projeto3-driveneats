@@ -1,40 +1,49 @@
-function select_prato (n) {
-    let todos = document.querySelectorAll('.prato div');
-    let item = todos[0];
-    for(let i=0; i < todos.length ; i ++){
-        item = todos[i];
-        item.classList.remove("select_item");
+function select_prato (elemento) {
+    const remove_select = document.querySelector('.prato .select_item');
+    if(remove_select !== null){
+        remove_select.classList.remove("select_item");
     }
-    let elemento = document.querySelector('.prato div:nth-child('+n+')');
-    elemento.classList.toggle("select_item");
+    elemento.classList.add("select_item");
+    confirma_pedido(1);
 }
 
-function select_bebida (n) {
-    let todos = document.querySelectorAll('.bebida div');
-    let item = todos[0];
-    for(let i=0; i < todos.length ; i ++){
-        item = todos[i];
-        item.classList.remove("select_item");
+function select_bebida (elemento) {
+    const remove_select = document.querySelector('.bebida .select_item');
+    if(remove_select !== null){
+        remove_select.classList.remove("select_item");
     }
-    let elemento = document.querySelector('.bebida div:nth-child('+n+')');
-    elemento.classList.toggle("select_item");
+    elemento.classList.add("select_item");
+    confirma_pedido(2);
 }
 
-function select_cookie (n) {
-    let todos = document.querySelectorAll('.cookie div');
-    let item = todos[0];
-    for(let i=0; i < todos.length ; i ++){
-        item = todos[i];
-        item.classList.remove("select_item");
+function select_cookie (elemento) {
+    const remove_select = document.querySelector('.cookie .select_item');
+    if(remove_select !== null){
+        remove_select.classList.remove("select_item");
     }
-    let elemento = document.querySelector('.cookie div:nth-child('+n+')');
-    elemento.classList.toggle("select_item");
-
-    //confirma pedido rever
-    let confirma = document.querySelector('.pedido button');
-    confirma.classList.add("pedido_ok");
-    confirma.innerHTML = "<p>Fechar Pedido</p> ";
+    elemento.classList.add("select_item");
+    confirma_pedido(3);
 }
+
+let prato = false;
+let beb = false;
+let cookie = false;
+
+function confirma_pedido (n_ok) {
+    if(n_ok === 1){
+        prato = true;
+    }else if(n_ok === 2){
+        beb = true;
+    }else if(n_ok === 3){
+        cookie = true;
+    }
+    if(prato && beb && cookie){
+        let confirma = document.querySelector('.pedido button');
+        confirma.classList.add("pedido_ok");
+        confirma.innerHTML = "<p>Fechar Pedido</p>";
+    } 
+}
+
 
 // function confere_pedido(caracter){
 //     let caracter_pedido = "";

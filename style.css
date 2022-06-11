@@ -123,12 +123,12 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
 }
 
 .pedido_ok {
     background: #32B72F;
     padding-top: 20px;
+    cursor: pointer;
 }
 
 .pedido p {
