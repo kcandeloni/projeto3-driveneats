@@ -98,14 +98,6 @@ h1 {
 
     color: #FFFFFF;
 }
-.img {
-    width: 144px;
-    height: 87px;
-    border-radius: 4px;
-    margin: 0 14px;
-    object-fit: cover;
-}
-
 
 .pedido{
     display: flex;
@@ -125,10 +117,26 @@ h1 {
     align-items: center;
 }
 
+.white_button{
+    width: 329px;
+    height: 52px;
+
+    background: #ffffff;
+    border-radius: 50px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .pedido_ok {
+    cursor: pointer;
+}
+
+.colorButton {
     background: #32B72F;
     padding-top: 20px;
-    cursor: pointer;
 }
 
 .pedido p {
@@ -178,4 +186,95 @@ h1 {
     line-height: 19px;
 
     color: #000000;
+}
+.transparent_tela {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.confirma {
+    width: 377px;
+    height: 353px;
+    margin: 0 auto;
+    background: #50D074;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;
+    position: fixed;
+    top: calc(50% - 353px/2);
+    left: calc(50% - 377px/2);
+    z-index: 3;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.check {
+    display: none;
+    color: #32B72F;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+}
+
+.select_item ion-icon {
+    display: flex;
+}
+
+.escondido {
+    display: none;
+}
+
+p5 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    color: #FFFFFF;
+}
+
+p5 > div {
+    display: flex;
+    justify-content: space-between;
+    width: 330px;
+    margin: 10px;
+}
+
+img {
+    width: 144px;
+    height: 87px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.confirma p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    color: #FFFFFF;;
+}
+
+p4 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+    line-height: 26px;
+    letter-spacing: 0.018em;
+
+    color: #50D074;
 }
